@@ -1,0 +1,30 @@
+
+.checked {
+    color: orange;
+}
+
+
+body {
+    font-family: 'Aleo';font-size: 12px;
+    text-align: center;
+}
+#formEddy {
+            margin: 0 auto;
+            width:200px;
+            /*border-style: inset;*/
+           /* border-width: thin;*/
+            display: none;
+        }
+
+.jc-center {
+            justify-content: center;
+        }
+
+.flex-parent {
+            display: flex;
+        }
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}

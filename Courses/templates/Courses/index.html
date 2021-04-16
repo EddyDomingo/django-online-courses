@@ -1,0 +1,213 @@
+{% extends "Courses/base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}<title>Online Course - Home</title>{% endblock %}
+{% block nav %}<a class="nav-link" href="#" id="userInfo">{{ StudentCourses.Fname }}</a>{% endblock %}
+{% block content %}
+
+
+
+        <form action="" method="post" id="formEddy">
+
+
+                {% csrf_token %}
+
+                    {% render_field form.Fname id="customEddy" placeholder="First Name"  %}<br>
+
+
+                    {% render_field form.Lname id="customEddy" placeholder="Last Name" %}<br>
+
+
+                    {% render_field form.Email id="customEddy" placeholder="Email" %}<br>
+
+
+                    {% render_field form.courseWork id="customEddy" placeholder="Technology_Entrepreneurship" %}<br>
+                    <br>
+                    <div class="flex-parent jc-center">
+                        <button type="submit" class="btn btn-secondary btn-sm" id="btnLogin" onclick="userInfo()">Login</button>
+                    </div>
+
+        </form>
+
+
+
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+              <img src="{% static 'Courses/images/course-1.png' %}" class="card-img-top" alt="course 1">
+             <div class="card-body">
+                <p class="card-text">Learn Strategy</p>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star checked"></span>
+                 <span class="fa fa-star"></span>
+                 <span class="fa fa-star"></span>
+             </div>
+            <div class="position-relative">
+                <div class="position-absolute bottom-0 end-0 translate-middle" id="btngreen">
+                    <button type="button" class="btn btn-success btn-sm" id="btnCourse1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+                            <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+                            <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+            <br>
+
+
+
+        </div>
+
+        <div class="card border-primary mb-3" style="width: 18rem;">
+              <img src="{% static 'Courses/images/course-2.png' %}" class="card-img-top" alt="course 2">
+                <div class="card-body">
+                    <p class="card-text">Learn Strategy</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+             </div>
+
+                <div class="position-relative">
+                <div class="position-absolute bottom-0 end-0 translate-middle" id="btngreen">
+                    <button type="button" class="btn btn-success btn-sm" id="btnCourse2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+                            <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+                            <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+            <br>
+
+        </div>
+
+        <div class="card border-warning mb-3" style="width: 18rem;">
+              <img src="{% static 'Courses/images/course-3.png' %}" class="card-img-top" alt="course 3">
+                <div class="card-body">
+                    <p class="card-text">Learn Strategy</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+             </div>
+
+        <div class="position-relative">
+                <div class="position-absolute bottom-0 end-0 translate-middle" id="btngreen">
+                    <button type="button" class="btn btn-success btn-sm" id="btnCourse3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+                            <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+                            <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+                        </svg>
+
+                    </button>
+                </div>
+            </div><br>
+
+        </div>
+
+        <div class="card border-danger mb-3" style="width: 18rem;">
+              <img src="{% static 'Courses/images/course-4.png' %}" class="card-img-top" alt="course 4">
+                <div class="card-body">
+                    <p class="card-text">Learn Strategy</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+             </div>
+
+            <div class="position-relative">
+                <div class="position-absolute bottom-0 end-0 translate-middle" id="btngreen">
+                    <button type="button" class="btn btn-success btn-sm" id="btnCourse4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+                            <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+                            <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+                        </svg>
+
+                    </button>
+                </div>
+            </div><br>
+
+        </div>
+
+        <div class="card border-primary mb-3" style="width: 18rem;">
+              <img src="{% static 'Courses/images/course-5.png' %}" class="card-img-top" alt="course 5">
+                <div class="card-body">
+                    <p class="card-text">Learn Strategy</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+             </div>
+
+            <div class="position-relative">
+                <div class="position-absolute bottom-0 end-0 translate-middle" id="btngreen">
+                    <button type="button" class="btn btn-success btn-sm" id="btnCourse5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+                            <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+                            <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+                        </svg>
+
+                    </button>
+                </div>
+            </div><br>
+
+        </div>
+
+        <div class="card border-warning mb-3" style="width: 18rem;">
+              <img src="{% static 'Courses/images/course-6.png' %}" class="card-img-top" alt="course 6">
+                <div class="card-body">
+                    <p class="card-text">Learn Strategy</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+             </div>
+
+            <div class="position-relative">
+                <div class="position-absolute bottom-0 end-0 translate-middle" id="btngreen">
+                    <button type="button" class="btn btn-success btn-sm" id="btnCourse6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+                            <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+                            <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+                        </svg>
+
+                    </button>
+                </div>
+            </div><br>
+
+        </div>
+
+        <div class="card border-primary mb-3" style="width: 18rem;">
+              <img src="{% static 'Courses/images/course-7.png' %}" class="card-img-top" alt="course 7">
+                <div class="card-body">
+                    <p class="card-text">Learn Strategy</p>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star checked"></span>
+                     <span class="fa fa-star"></span>
+                     <span class="fa fa-star"></span>
+             </div>
+
+            <div class="position-relative">
+                <div class="position-absolute bottom-0 end-0 translate-middle" id="btngreen">
+                    <button type="button" class="btn btn-success btn-sm" id="btnCourse7">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+                            <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+                            <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+                        </svg>
+
+                    </button>
+                </div>
+            </div><br>
+
+        </div>
+
+{% endblock %}
